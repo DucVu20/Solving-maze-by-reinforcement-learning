@@ -30,7 +30,7 @@ Q_table=rand(numel(map),4);
 for episode=1:8000
     maze=zeros(size(map));
     maze(1)=agent;
-    epsilon = 1 - (episode / 1001) ;
+    epsilon = 1 - (episode / 8001) ;
     for t=1:340
         state=find(maze==agent);
         if state==find(map==100)
